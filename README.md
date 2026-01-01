@@ -1,3 +1,4 @@
+
 # Credit Card Fraud Detection Pipeline 🛡️
 
 **End-to-end machine learning system** for real-time detection of fraudulent credit card transactions using the [Kaggle Credit Card Fraud Detection dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) (284,807 transactions, 0.17% fraud rate).
@@ -91,3 +92,7 @@ Full observability via MLflow
 Interactive user interface for non-technical stakeholders
 Clean, modular, and well-documented code
 ```
+=======
+# My-Projects
+Projects for understanding core concepts
+>>>>>>> b30fecfc3c7486d3e34fa781e29a911f51016ab8

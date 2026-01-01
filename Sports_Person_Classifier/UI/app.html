@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Person Classifier</title>
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+
+    <!-- Dropzone CSS -->
+    <link rel="stylesheet" href="./dropzone.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./app.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light justify-content-center">
+      <a class="navbar-brand" href="#">Sports Person Classifier</a>
+    </nav>
+
+    <div class="container mt-4">
+      <!-- Player Cards -->
+      <div class="row row-cols-1 row-cols-md-4 text-center">
+        <div class="col card-wrapper" data-player="lionel_messi">
+          <div class="card border-0">
+            <div class="custom-circle-image mx-auto">
+              <img src="./images/messi.jpeg" alt="Lionel Messi" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Lionel Messi</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-wrapper" data-player="maria_sharapova">
+          <div class="card border-0">
+            <div class="custom-circle-image mx-auto">
+              <img src="./images/sharapova.jpeg" alt="Maria Sharapova" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Maria Sharapova</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-wrapper" data-player="roger_federer">
+          <div class="card border-0">
+            <div class="custom-circle-image mx-auto">
+              <img src="./images/federer.jpeg" alt="Roger Federer" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Roger Federer</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-wrapper" data-player="serena_williams">
+          <div class="card border-0">
+            <div class="custom-circle-image mx-auto">
+              <img src="./images/serena.jpeg" alt="Serena Williams" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Serena Williams</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-wrapper" data-player="virat_kohli">
+          <div class="card border-0">
+            <div class="custom-circle-image mx-auto">
+              <img src="./images/virat.jpeg" alt="Virat Kohli" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Virat Kohli</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-wrapper" data-player="cristiano_ronaldo">
+          <div class="card border-0">
+            <div class="custom-circle-image mx-auto">
+              <img src="./images/ronaldo.jpeg" alt="Cristiano Ronaldo" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Cristiano Ronaldo</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card-wrapper" data-player="max_verstappen">
+          <div class="card border-0">
+            <div class="custom-circle-image mx-auto">
+              <img src="./images/verstappen.jpeg" alt="Max Verstappen" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Max Verstappen</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upload & Results -->
+      <div class="row mt-5">
+        <!-- Upload -->
+        <div class="col-md-4">
+          <form class="dropzone" id="dropzone">
+            <div class="dz-message">
+              <img src="./images/upload.png" width="50" height="50" /><br />
+              <span>Drop image here or click to upload</span>
+            </div>
+          </form>
+
+          <div class="text-center mt-3">
+            <button id="submitBtn" class="btn btn-success">Classify</button>
+          </div>
+        </div>
+
+        <!-- Error -->
+        <div class="col-md-8 error" id="error">
+          Can't classify image. Face or eyes not detected.
+        </div>
+
+        <!-- Result Card -->
+        <div class="col-md-4" id="resultHolder"></div>
+
+        <!-- Probability Table -->
+        <div class="col-md-4" id="divClassTable">
+          <table id="classTable">
+            <tr>
+              <th>Player</th>
+              <th>Probability</th>
+            </tr>
+            <tr>
+              <td>Lionel Messi</td>
+              <td id="score_lionel_messi"></td>
+            </tr>
+            <tr>
+              <td>Maria Sharapova</td>
+              <td id="score_maria_sharapova"></td>
+            </tr>
+            <tr>
+              <td>Roger Federer</td>
+              <td id="score_roger_federer"></td>
+            </tr>
+            <tr>
+              <td>Serena Williams</td>
+              <td id="score_serena_williams"></td>
+            </tr>
+            <tr>
+              <td>Virat Kohli</td>
+              <td id="score_virat_kohli"></td>
+            </tr>
+            <tr>
+              <td>Cristiano Ronaldo</td>
+              <td id="score_cristiano_ronaldo"></td>
+            </tr>
+            <tr>
+              <td>Max Verstappen</td>
+              <td id="score_max_verstappen"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="./dropzone.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
