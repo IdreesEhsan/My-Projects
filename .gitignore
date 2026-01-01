@@ -1,0 +1,7 @@
+fraud-env/
+__pycache__/
+*.pyc
+mlflow.db
+artifacts/
+*.png
+data/creditcard.csv
